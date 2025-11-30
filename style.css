@@ -263,3 +263,62 @@ body {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
+
+/* --- LANGUAGE SYSTEM ------------------------------------------- */
+
+/* By default: show English, hide Hebrew */
+.lang-he {
+    display: none !important;
+}
+
+/* When Hebrew is selected */
+body.lang-hebrew .lang-en {
+    display: none !important;
+}
+
+body.lang-hebrew .lang-he {
+    display: block !important;
+}
+
+/* Apply RTL layout when in Hebrew mode */
+body.lang-hebrew {
+    direction: rtl;
+    text-align: right;
+}
+
+body.lang-hebrew .nav-content {
+    flex-direction: row-reverse;
+}
+
+body.lang-hebrew .top-nav nav a {
+    margin-left: 0;
+    margin-right: 1rem;
+}
+
+/* Language switch buttons */
+.lang-switch {
+    display: flex;
+    gap: 0.35rem;
+}
+
+.lang-btn {
+    border: 1px solid #d1d5db;
+    background-color: #f9fafb;
+    border-radius: 999px;
+    padding: 0.25rem 0.6rem;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.lang-btn:hover {
+    background-color: #e5e7eb;
+}
+
+/* RTL tweaks */
+body.lang-hebrew p, 
+body.lang-hebrew h1, 
+body.lang-hebrew h2, 
+body.lang-hebrew h3,
+body.lang-hebrew li {
+    text-align: right;
+}
