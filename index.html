@@ -1,39 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Your Name | Developer Portfolio</title>
+    <title>Israel Mor | Developer Portfolio</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <!-- Navigation -->
     <header class="top-nav">
         <div class="container nav-content">
-            <div class="logo">YourName.dev</div>
+            <div class="logo">IsraelMor.dev</div>
             <nav>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+                <!-- English nav -->
+                <a href="#about" class="nav-link lang-en">About</a>
+                <a href="#skills" class="nav-link lang-en">Skills</a>
+                <a href="#projects" class="nav-link lang-en">Projects</a>
+                <a href="#education" class="nav-link lang-en">Education</a>
+                <a href="#contact" class="nav-link lang-en">Contact</a>
+
+                <!-- Hebrew nav -->
+                <a href="#about" class="nav-link lang-he">עליי</a>
+                <a href="#skills" class="nav-link lang-he">כישורים</a>
+                <a href="#projects" class="nav-link lang-he">פרויקטים</a>
+                <a href="#education" class="nav-link lang-he">השכלה</a>
+                <a href="#contact" class="nav-link lang-he">צור קשר</a>
             </nav>
+
+            <div class="lang-switch">
+                <button type="button" class="lang-btn" data-lang="en">EN</button>
+                <button type="button" class="lang-btn" data-lang="he">עב</button>
+            </div>
         </div>
     </header>
 
     <!-- Hero / Intro -->
     <section class="hero">
         <div class="container hero-content">
-            <div>
+            <!-- English hero -->
+            <div class="lang-block lang-en">
                 <p class="hero-subtitle">Hi, I'm</p>
-                <h1 class="hero-title">Your Name</h1>
+                <h1 class="hero-title">Israel Mor</h1>
                 <p class="hero-text">
-                    A <strong>Computer Science student</strong> and aspiring developer
-                    who loves building projects in <strong>C++</strong>, algorithms,
-                    and more. This portfolio showcases some of my work.
+                    A proactive third-year <strong>B.Sc. Computer Science and Mathematics</strong>
+                    student at Ariel University, seeking a student position in
+                    <strong>software development</strong> or <strong>QA</strong>.
+                    I have experience in Python, Java, C, C#, and C++, with a strong
+                    foundation in object-oriented programming and databases.
                 </p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn primary">View My Projects</a>
                     <a href="#contact" class="btn secondary">Download CV</a>
+                </div>
+            </div>
+
+            <!-- Hebrew hero -->
+            <div class="lang-block lang-he">
+                <p class="hero-subtitle">שלום, אני</p>
+                <h1 class="hero-title">ישראל מור</h1>
+                <p class="hero-text">
+                    סטודנט פרואקטיבי שנה ג' לתואר
+                    <strong>B.Sc. במדעי המחשב ומתמטיקה</strong> באוניברסיטת אריאל,
+                    מחפש משרת סטודנט בפיתוח תוכנה או <strong>QA</strong>.
+                    בעל ניסיון ב־Python, Java, C, C#, C++ וידע חזק בתכנות מונחה־עצמים
+                    ובמסדי נתונים (SQL ו־NoSQL).
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn primary">הפרויקטים שלי</a>
+                    <a href="#contact" class="btn secondary">הורדת קורות חיים</a>
                 </div>
             </div>
         </div>
@@ -42,56 +76,144 @@
     <!-- About -->
     <section id="about" class="section">
         <div class="container">
-            <h2>About Me</h2>
-            <p>
-                I'm a Computer Science student with a strong interest in
-                <strong>software development</strong>, <strong>algorithms</strong>,
-                and <strong>systems programming</strong>. I enjoy solving challenging
-                problems and learning new technologies through hands-on projects.
-            </p>
-            <p>
-                On this site you'll find some of my favorite projects, including
-                implementations of data structures, games (like a C++ implementation
-                of Coup), and coursework in topics like
-                <strong>automata theory</strong> and <strong>databases</strong>.
-            </p>
+            <!-- English about -->
+            <div class="lang-block lang-en">
+                <h2>About Me</h2>
+                <p>
+                    I'm a third-year Computer Science and Mathematics student at Ariel University.
+                    I enjoy building reliable, well-structured software and learning new technologies
+                    through hands-on projects. My background includes both <strong>software development</strong>
+                    and <strong>hardware/computer technician experience</strong>, which helps me understand
+                    systems end-to-end.
+                </p>
+                <p>
+                    I have practical experience with object-oriented programming (Java, C#, C++),
+                    scripting and backend logic (Python), and networking concepts (e.g., implementing
+                    an FTP server over Reliable UDP). I also work with SQL and NoSQL databases, and I’m
+                    comfortable with Linux, macOS, and Windows environments.
+                </p>
+                <p>
+                    Beyond the technical side, I value responsibility, teamwork, and project management.
+                    I have also volunteered in mentoring and support projects, which helped me improve
+                    my communication and leadership skills.
+                </p>
+            </div>
+
+            <!-- Hebrew about -->
+            <div class="lang-block lang-he">
+                <h2>עליי</h2>
+                <p>
+                    אני סטודנט שנה ג' למדעי המחשב ומתמטיקה באוניברסיטת אריאל.
+                    אני אוהב לבנות תוכנה אמינה ומסודרת, וללמוד טכנולוגיות חדשות
+                    דרך פרויקטים מעשיים. יש לי רקע גם ב<strong>פיתוח תוכנה</strong>
+                    וגם ב<strong>עבודה כטכנאי מחשבים</strong>, מה שעוזר לי להבין
+                    מערכות מקצה לקצה.
+                </p>
+                <p>
+                    יש לי ניסיון מעשי בתכנות מונחה־עצמים (Java, C#, C++),
+                    לוגיקת Backend ו־Scripting (Python) והכרה של עקרונות תקשורת
+                    (למשל מימוש שרת FTP מעל Reliable UDP). אני עובד עם מסדי נתונים
+                    SQL ו־NoSQL, ומרגיש בנוח בסביבות Linux, macOS ו־Windows.
+                </p>
+                <p>
+                    מעבר לצד הטכני, חשובים לי אחריות, עבודת צוות וניהול משימות.
+                    השתתפתי גם בפרויקטים התנדבותיים, שם חיזקתי את יכולות
+                    התקשורת וההובלה שלי.
+                </p>
+            </div>
         </div>
     </section>
 
     <!-- Skills -->
     <section id="skills" class="section section-alt">
         <div class="container">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Languages</h3>
-                    <ul>
-                        <li>C++</li>
-                        <li>C</li>
-                        <li>Python (basic)</li>
-                        <li>SQL (basic)</li>
-                        <li>HTML & CSS (this website!)</li>
-                    </ul>
+            <!-- English skills -->
+            <div class="lang-block lang-en">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>Programming Languages</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>Java</li>
+                            <li>C</li>
+                            <li>C++</li>
+                            <li>C#</li>
+                            <li>Assembler</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Technologies & Tools</h3>
+                        <ul>
+                            <li>Object-Oriented Programming (OOP)</li>
+                            <li>SQL &amp; NoSQL Databases</li>
+                            <li>Docker, Kubernetes</li>
+                            <li>Git &amp; GitHub</li>
+                            <li>Doctest (C++ unit testing)</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Operating Systems & Hardware</h3>
+                        <ul>
+                            <li>Linux, macOS, Windows</li>
+                            <li>Experience as a computer technician</li>
+                            <li>Hardware troubleshooting & setup</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Soft Skills & Languages</h3>
+                        <ul>
+                            <li>Teamwork & responsibility</li>
+                            <li>Project ownership & self-learning</li>
+                            <li>Hebrew: Native</li>
+                            <li>English: Native-level</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="skill-card">
-                    <h3>Technologies & Tools</h3>
-                    <ul>
-                        <li>Git & GitHub</li>
-                        <li>Linux / Ubuntu</li>
-                        <li>SFML (C++ graphics)</li>
-                        <li>Doctest (C++ testing)</li>
-                        <li>VS Code / CLion</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <h3>Topics</h3>
-                    <ul>
-                        <li>Data Structures & Algorithms</li>
-                        <li>Object-Oriented Programming</li>
-                        <li>Automata & Formal Languages</li>
-                        <li>Linear Algebra & Probability (for CS)</li>
-                        <li>Relational Databases & SQL</li>
-                    </ul>
+            </div>
+
+            <!-- Hebrew skills -->
+            <div class="lang-block lang-he">
+                <h2>כישורים</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>שפות תכנות</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>Java</li>
+                            <li>C</li>
+                            <li>C++</li>
+                            <li>C#</li>
+                            <li>Assembler</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>טכנולוגיות וכלים</h3>
+                        <ul>
+                            <li>תכנות מונחה עצמים (OOP)</li>
+                            <li>מסדי נתונים SQL ו־NoSQL</li>
+                            <li>Docker, Kubernetes</li>
+                            <li>Git &amp; GitHub</li>
+                            <li>Doctest (בדיקות יחידה ב־C++)</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>מערכות הפעלה וחומרה</h3>
+                        <ul>
+                            <li>Linux, macOS, Windows</li>
+                            <li>ניסיון כטכנאי מחשבים</li>
+                            <li>איתור תקלות חומרה והתקנות</li>
+                        </ul>
+                    </div>
+                    <div class="skill-card">
+                        <h3>כישורים רכים ושפות</h3>
+                        <ul>
+                            <li>עבודת צוות ואחריות</li>
+                            <li>יכולת למידה עצמית וניהול משימות</li>
+                            <li>עברית: שפת אם</li>
+                            <li>אנגלית: ברמת שפת אם</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -100,105 +222,355 @@
     <!-- Projects -->
     <section id="projects" class="section">
         <div class="container">
-            <h2>Projects</h2>
-            <p class="section-intro">
-                Here are some of my coding projects. You can view the source code on GitHub,
-                and in some cases see screenshots or demos.
-            </p>
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <article class="project-card">
-                    <h3>Coup – C++ Game Implementation with GUI</h3>
-                    <p>
-                        A full implementation of the board game <em>Coup</em> in C++,
-                        including game logic, multiple roles, actions, blocks, and a GUI
-                        built with SFML. The project showcases OOP design, inheritance,
-                        polymorphism, and state management.
-                    </p>
-                    <ul class="project-tags">
-                        <li>C++</li>
-                        <li>SFML</li>
-                        <li>OOP</li>
-                    </ul>
-                    <div class="project-links">
-                        <!-- Replace # with your GitHub repo link -->
-                        <a href="#" target="_blank" rel="noopener">View on GitHub</a>
-                        <!-- Optional: link to screenshots / demo -->
-                        <!-- <a href="#" target="_blank" rel="noopener">View Demo</a> -->
-                    </div>
-                </article>
+            <!-- English projects -->
+            <div class="lang-block lang-en">
+                <h2>Projects</h2>
+                <p class="section-intro">
+                    A selection of projects that highlight my skills in software development,
+                    networking, game design, and object-oriented programming.
+                </p>
+                <div class="projects-grid">
+                    <!-- Python FTP Project -->
+                    <article class="project-card">
+                        <h3>Reliable UDP FTP Server – Python</h3>
+                        <p>
+                            Implemented an FTP server application in Python using a Reliable UDP
+                            protocol. This project deepened my understanding of network
+                            communication principles, error handling, and reliability mechanisms.
+                            I also designed and built a graphical user interface to make the
+                            client side user-friendly.
+                        </p>
+                        <ul class="project-tags">
+                            <li>Python</li>
+                            <li>Networking</li>
+                            <li>Reliable UDP</li>
+                            <li>GUI</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="#" target="_blank" rel="noopener">View on GitHub</a>
+                        </div>
+                    </article>
 
-                <!-- Project 2 -->
-                <article class="project-card">
-                    <h3>Generic Container Library – Custom Iterators in C++</h3>
-                    <p>
-                        A custom C++ container class with several iterator types
-                        (ascending, descending, side-cross, etc.). The project
-                        demonstrates template programming, custom iterators,
-                        and writing unit tests with doctest.
-                    </p>
-                    <ul class="project-tags">
-                        <li>C++</li>
-                        <li>Templates</li>
-                        <li>Iterators</li>
-                    </ul>
-                    <div class="project-links">
-                        <a href="#" target="_blank" rel="noopener">View on GitHub</a>
-                    </div>
-                </article>
+                    <!-- Java Vikings Game -->
+                    <article class="project-card">
+                        <h3>Vikings Board Game – Java</h3>
+                        <p>
+                            Developed a Vikings board game in Java using object-oriented
+                            programming principles. Focused on a modular and maintainable
+                            codebase, with clear separation between game logic, state management,
+                            and user interaction handling.
+                        </p>
+                        <ul class="project-tags">
+                            <li>Java</li>
+                            <li>OOP</li>
+                            <li>Game Development</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="#" target="_blank" rel="noopener">View on GitHub</a>
+                        </div>
+                    </article>
 
-                <!-- Project 3 -->
-                <article class="project-card">
-                    <h3>Algorithms & Automata Exercise Collection</h3>
-                    <p>
-                        A collection of solved exercises from courses in automata,
-                        formal languages, and algorithms. Includes DFA/NFA designs,
-                        regular expressions, grammars, and problem solutions
-                        written in a clear, exam-style format.
-                    </p>
-                    <ul class="project-tags">
-                        <li>Automata</li>
-                        <li>Theory</li>
-                        <li>Problem Solving</li>
-                    </ul>
-                    <div class="project-links">
-                        <a href="#" target="_blank" rel="noopener">View on GitHub</a>
-                    </div>
-                </article>
+                    <!-- C++ Catan Game -->
+                    <article class="project-card">
+                        <h3>Catan Board Game – C++</h3>
+                        <p>
+                            Built a C++ implementation of the board game Catan, including
+                            a graphical user interface. This project helped me improve both
+                            my C++ skills and my ability to design intuitive and responsive
+                            GUI components for complex game rules.
+                        </p>
+                        <ul class="project-tags">
+                            <li>C++</li>
+                            <li>GUI</li>
+                            <li>Game Development</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="#" target="_blank" rel="noopener">View on GitHub</a>
+                        </div>
+                    </article>
 
-                <!-- You can copy-paste and edit this block to add more projects -->
+                    <!-- Optional: extra C++ projects if you want to keep them -->
+                    <article class="project-card">
+                        <h3>Additional C++ Projects (Coup, Containers, Graphs)</h3>
+                        <p>
+                            Beyond the above, I have built several C++ projects including a full
+                            implementation of the game Coup with SFML, a generic container class
+                            with custom iterators, and a graph library implementing BFS/DFS without
+                            STL containers. These projects strengthen my understanding of data
+                            structures, algorithms, and OOP design.
+                        </p>
+                        <ul class="project-tags">
+                            <li>C++</li>
+                            <li>SFML</li>
+                            <li>Algorithms</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="#" target="_blank" rel="noopener">View on GitHub</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Hebrew projects -->
+            <div class="lang-block lang-he">
+                <h2>פרויקטים</h2>
+                <p class="section-intro">
+                    מבחר פרויקטים שמדגישים את היכולות שלי בפיתוח תוכנה,
+                    תקשורת מחשבים, משחקים ותכנות מונחה עצמים.
+                </p>
+                <div class="projects-grid">
+                    <!-- Python FTP Project -->
+                    <article class="project-card">
+                        <h3>שרת FTP מעל Reliable UDP – Python</h3>
+                        <p>
+                            פיתחתי יישום שרת FTP ב־Python המבוסס על פרוטוקול Reliable UDP.
+                            הפרויקט העמיק את ההבנה שלי בעקרונות תקשורת מחשבים, טיפול
+                            בשגיאות ומנגנוני אמינות. בנוסף יצרתי ממשק גרפי נוח ללקוח,
+                            המאפשר שימוש פשוט ואינטואיטיבי.
+                        </p>
+                        <ul class="project-tags">
+                            <li>Python</li>
+                            <li>תקשורת</li>
+                            <li>Reliable UDP</li>
+                            <li>GUI</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="#" target="_blank" rel="noopener">צפייה בקוד ב־GitHub</a>
+                        </div>
+                    </article>
+
+                    <!-- Java Vikings Game -->
+                    <article class="project-card">
+                        <h3>משחק לוח Vikings – Java</h3>
+                        <p>
+                            פיתחתי משחק לוח בסגנון Vikings ב־Java תוך שימוש בעקרונות
+                            תכנות מונחה־עצמים. התמקדתי בקוד מודולרי וניתן לתחזוקה,
+                            בהפרדה בין לוגיקת המשחק, ניהול מצב המשחק וטיפול בקלט מהמשתמש.
+                        </p>
+                        <ul class="project-tags">
+                            <li>Java</li>
+                            <li>OOP</li>
+                            <li>פיתוח משחקים</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="#" target="_blank" rel="noopener">צפייה בקוד ב־GitHub</a>
+                        </div>
+                    </article>
+
+                    <!-- C++ Catan Game -->
+                    <article class="project-card">
+                        <h3>משחק לוח Catan – C++</h3>
+                        <p>
+                            מימוש משחק הלוח Catan ב־C++, כולל ממשק גרפי. הפרויקט סייע
+                            לי להעמיק ב־C++ ולתכנן רכיבי GUI אינטואיטיביים ותגובתיים
+                            עבור חוקים מורכבים של משחק.
+                        </p>
+                        <ul class="project-tags">
+                            <li>C++</li>
+                            <li>GUI</li>
+                            <li>פיתוח משחקים</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="#" target="_blank" rel="noopener">צפייה בקוד ב־GitHub</a>
+                        </div>
+                    </article>
+
+                    <!-- Optional: extra C++ projects -->
+                    <article class="project-card">
+                        <h3>פרויקטים נוספים ב־C++ (Coup, מכולה גנרית, גרפים)</h3>
+                        <p>
+                            בנוסף, בניתי מספר פרויקטים נוספים ב־C++, ביניהם מימוש מלא
+                            של המשחק Coup עם SFML, מכולה גנרית עם איטרטורים מותאמים
+                            וספריית גרפים הכוללת BFS/DFS ללא שימוש ב־STL. פרויקטים אלו
+                            מחזקים את ההבנה שלי במבני נתונים, אלגוריתמים ועיצוב מונחה־עצמים.
+                        </p>
+                        <ul class="project-tags">
+                            <li>C++</li>
+                            <li>SFML</li>
+                            <li>אלגוריתמים</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="#" target="_blank" rel="noopener">צפייה בקוד ב־GitHub</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Volunteering -->
+    <section id="education" class="section section-alt">
+        <div class="container">
+            <!-- English -->
+            <div class="lang-block lang-en">
+                <h2>Education & Volunteering</h2>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <h3>B.Sc. Computer Science & Mathematics</h3>
+                        <p>
+                            <strong>Ariel University</strong> (2023 – Present)  
+                            Relevant courses: OOP, Algorithms, Operating Systems,
+                            Data Structures, Communication Networks.
+                        </p>
+                    </article>
+                    <article class="project-card">
+                        <h3>High School Diploma – Amal A Ramla</h3>
+                        <p>
+                            Graduated with honors. Advanced studies in Physics (5 units),
+                            Software Engineering (5), Computer Science (5), Mathematics (5),
+                            and English (5).
+                        </p>
+                    </article>
+                    <article class="project-card">
+                        <h3>Volunteering</h3>
+                        <p>
+                            <strong>"Friends" Project:</strong> Assisted children in the Gaza
+                            border area with emotional support and tutoring.
+                        </p>
+                        <p>
+                            <strong>Perach Project Mentor:</strong> Mentored students as part
+                            of the Perach project in Ariel.
+                        </p>
+                    </article>
+                </div>
+            </div>
+
+            <!-- Hebrew -->
+            <div class="lang-block lang-he">
+                <h2>השכלה והתנדבות</h2>
+                <div class="projects-grid">
+                    <article class="project-card">
+                        <h3>B.Sc. במדעי המחשב ומתמטיקה</h3>
+                        <p>
+                            <strong>אוניברסיטת אריאל</strong> (2023 – היום)  
+                            קורסים רלוונטיים: OOP, אלגוריתמים, מערכות הפעלה,
+                            מבני נתונים, רשתות תקשורת.
+                        </p>
+                    </article>
+                    <article class="project-card">
+                        <h3>בגרות מלאה – עמל א' רמלה</h3>
+                        <p>
+                            סיום לימודים בהצטיינות. מגמות מוגברות: פיזיקה (5 יח"ל),
+                            הנדסת תוכנה (5), מדעי המחשב (5), מתמטיקה (5), אנגלית (5).
+                        </p>
+                    </article>
+                    <article class="project-card">
+                        <h3>התנדבות</h3>
+                        <p>
+                            <strong>פרויקט "חברים":</strong> ליווי ותמיכה רגשית בילדים
+                            מאזור עוטף עזה, כולל עזרה בלימודים.
+                        </p>
+                        <p>
+                            <strong>מנטור בפרויקט פר"ח:</strong> חונכות סטודנטים במסגרת
+                            פרויקט פר"ח באריאל.
+                        </p>
+                    </article>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="section section-alt">
+    <section id="contact" class="section">
         <div class="container">
-            <h2>Contact</h2>
-            <p>
-                Interested in working together or want to know more about my projects?
-                Feel free to reach out.
-            </p>
-            <ul class="contact-list">
-                <li><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></li>
-                <li><strong>GitHub:</strong> <a href="https://github.com/your-github-username" target="_blank" rel="noopener">github.com/your-github-username</a></li>
-                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noopener">linkedin.com/in/your-linkedin</a></li>
-                <!-- Optional: link to CV -->
-                <!-- <li><strong>CV:</strong> <a href="cv.pdf" target="_blank" rel="noopener">Download PDF</a></li> -->
-            </ul>
+            <!-- English contact -->
+            <div class="lang-block lang-en">
+                <h2>Contact</h2>
+                <p>
+                    Interested in working together or want to know more about my projects?
+                    Feel free to reach out.
+                </p>
+                <ul class="contact-list">
+                    <li><strong>Email:</strong>
+                        <a href="mailto:israelmor555@gmail.com">israelmor555@gmail.com</a>
+                    </li>
+                    <li><strong>Phone:</strong>
+                        <a href="tel:+972509777876">+972-50-977-7876</a>
+                    </li>
+                    <li><strong>GitHub:</strong>
+                        <a href="https://github.com/Element920" target="_blank" rel="noopener">
+                            github.com/Element920
+                        </a>
+                    </li>
+                    <li><strong>LinkedIn:</strong>
+                        <a href="https://www.linkedin.com/in/israel-mor-5219222b0"
+                           target="_blank" rel="noopener">
+                            linkedin.com/in/israel-mor-5219222b0
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Hebrew contact -->
+            <div class="lang-block lang-he">
+                <h2>צור קשר</h2>
+                <p>
+                    מעוניינים לעבוד איתי או לשמוע עוד על הפרויקטים שלי?
+                    מוזמנים לפנות אליי.
+                </p>
+                <ul class="contact-list">
+                    <li><strong>אימייל:</strong>
+                        <a href="mailto:israelmor555@gmail.com">israelmor555@gmail.com</a>
+                    </li>
+                    <li><strong>טלפון:</strong>
+                        <a href="tel:+972509777876">+972-50-977-7876</a>
+                    </li>
+                    <li><strong>GitHub:</strong>
+                        <a href="https://github.com/Element920" target="_blank" rel="noopener">
+                            github.com/Element920
+                        </a>
+                    </li>
+                    <li><strong>LinkedIn:</strong>
+                        <a href="https://www.linkedin.com/in/israel-mor-5219222b0"
+                           target="_blank" rel="noopener">
+                            linkedin.com/in/israel-mor-5219222b0
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; <span id="year"></span> Your Name. All rights reserved.</p>
+            <p class="lang-en">&copy; <span id="year"></span> Israel Mor. All rights reserved.</p>
+            <p class="lang-he">&copy; <span id="year-he"></span> ישראל מור. כל הזכויות שמורות.</p>
         </div>
     </footer>
 
     <script>
         // Set current year automatically in footer
-        document.getElementById("year").textContent = new Date().getFullYear();
+        const year = new Date().getFullYear();
+        document.getElementById("year").textContent = year;
+        document.getElementById("year-he").textContent = year;
+
+        function setLanguage(lang) {
+            const html = document.documentElement;
+            const body = document.body;
+
+            if (lang === "he") {
+                body.classList.add("lang-hebrew");
+                html.lang = "he";
+                html.dir = "rtl";
+            } else {
+                body.classList.remove("lang-hebrew");
+                html.lang = "en";
+                html.dir = "ltr";
+            }
+            localStorage.setItem("site-lang", lang);
+        }
+
+        // attach events to buttons
+        document.querySelectorAll(".lang-btn").forEach(btn => {
+            btn.addEventListener("click", () => {
+                setLanguage(btn.dataset.lang);
+            });
+        });
+
+        // initialize from localStorage or default to EN
+        const savedLang = localStorage.getItem("site-lang") || "en";
+        setLanguage(savedLang);
     </script>
 </body>
 </html>
