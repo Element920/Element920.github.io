@@ -11,7 +11,8 @@
     <header class="top-nav">
         <div class="container nav-content">
             <div class="logo">IsraelMor.dev</div>
-            <nav>
+
+            <nav class="main-nav">
                 <!-- English nav -->
                 <a href="#about" class="nav-link lang-en">About</a>
                 <a href="#skills" class="nav-link lang-en">Skills</a>
@@ -27,9 +28,12 @@
                 <a href="#contact" class="nav-link lang-he">צור קשר</a>
             </nav>
 
+            <!-- Language switch with icon -->
             <div class="lang-switch">
+                <span class="lang-icon" aria-hidden="true">🌐</span>
                 <button type="button" class="lang-btn" data-lang="en">EN</button>
-                <button type="button" class="lang-btn" data-lang="he">עב</button>
+                <span class="lang-separator">|</span>
+                <button type="button" class="lang-btn" data-lang="he">עִבְרִית</button>
             </div>
         </div>
     </header>
@@ -230,7 +234,6 @@
                     networking, game design, and object-oriented programming.
                 </p>
                 <div class="projects-grid">
-                    <!-- Python FTP Project -->
                     <article class="project-card">
                         <h3>Reliable UDP FTP Server – Python</h3>
                         <p>
@@ -251,7 +254,6 @@
                         </div>
                     </article>
 
-                    <!-- Java Vikings Game -->
                     <article class="project-card">
                         <h3>Vikings Board Game – Java</h3>
                         <p>
@@ -270,7 +272,6 @@
                         </div>
                     </article>
 
-                    <!-- C++ Catan Game -->
                     <article class="project-card">
                         <h3>Catan Board Game – C++</h3>
                         <p>
@@ -289,7 +290,6 @@
                         </div>
                     </article>
 
-                    <!-- Optional: extra C++ projects if you want to keep them -->
                     <article class="project-card">
                         <h3>Additional C++ Projects (Coup, Containers, Graphs)</h3>
                         <p>
@@ -319,7 +319,6 @@
                     תקשורת מחשבים, משחקים ותכנות מונחה עצמים.
                 </p>
                 <div class="projects-grid">
-                    <!-- Python FTP Project -->
                     <article class="project-card">
                         <h3>שרת FTP מעל Reliable UDP – Python</h3>
                         <p>
@@ -339,7 +338,6 @@
                         </div>
                     </article>
 
-                    <!-- Java Vikings Game -->
                     <article class="project-card">
                         <h3>משחק לוח Vikings – Java</h3>
                         <p>
@@ -357,7 +355,6 @@
                         </div>
                     </article>
 
-                    <!-- C++ Catan Game -->
                     <article class="project-card">
                         <h3>משחק לוח Catan – C++</h3>
                         <p>
@@ -375,7 +372,6 @@
                         </div>
                     </article>
 
-                    <!-- Optional: extra C++ projects -->
                     <article class="project-card">
                         <h3>פרויקטים נוספים ב־C++ (Coup, מכולה גנרית, גרפים)</h3>
                         <p>
@@ -545,7 +541,7 @@
         document.getElementById("year").textContent = year;
         document.getElementById("year-he").textContent = year;
 
-        function setLanguage(lang) {
+        function applyLanguage(lang) {
             const html = document.documentElement;
             const body = document.body;
 
@@ -558,19 +554,49 @@
                 html.lang = "en";
                 html.dir = "ltr";
             }
+
+            // Highlight active button
+            document.querySelectorAll(".lang-btn").forEach(btn => {
+                btn.classList.toggle("lang-btn--active", btn.dataset.lang === lang);
+            });
+
             localStorage.setItem("site-lang", lang);
         }
 
-        // attach events to buttons
+        function changeLanguage(lang) {
+            const body = document.body;
+
+            // Fade out
+            body.classList.add("lang-fade-out");
+
+            setTimeout(() => {
+                // Apply language change
+                applyLanguage(lang);
+
+                // Fade back in
+                body.classList.remove("lang-fade-out");
+                body.classList.add("lang-fade-in");
+
+                setTimeout(() => {
+                    body.classList.remove("lang-fade-in");
+                }, 150);
+            }, 150);
+        }
+
+        // Attach events to buttons
         document.querySelectorAll(".lang-btn").forEach(btn => {
             btn.addEventListener("click", () => {
-                setLanguage(btn.dataset.lang);
+                const selected = btn.dataset.lang;
+                const current = localStorage.getItem("site-lang") || "en";
+                if (selected !== current) {
+                    changeLanguage(selected);
+                }
             });
         });
 
-        // initialize from localStorage or default to EN
+        // Initialize from localStorage or default to EN (no fade on first load)
         const savedLang = localStorage.getItem("site-lang") || "en";
-        setLanguage(savedLang);
+        applyLanguage(savedLang);
     </script>
 </body>
 </html>
