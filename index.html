@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Name | Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="top-nav">
+        <div class="container nav-content">
+            <div class="logo">YourName.dev</div>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero / Intro -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div>
+                <p class="hero-subtitle">Hi, I'm</p>
+                <h1 class="hero-title">Your Name</h1>
+                <p class="hero-text">
+                    A <strong>Computer Science student</strong> and aspiring developer
+                    who loves building projects in <strong>C++</strong>, algorithms,
+                    and more. This portfolio showcases some of my work.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn primary">View My Projects</a>
+                    <a href="#contact" class="btn secondary">Download CV</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>
+                I'm a Computer Science student with a strong interest in
+                <strong>software development</strong>, <strong>algorithms</strong>,
+                and <strong>systems programming</strong>. I enjoy solving challenging
+                problems and learning new technologies through hands-on projects.
+            </p>
+            <p>
+                On this site you'll find some of my favorite projects, including
+                implementations of data structures, games (like a C++ implementation
+                of Coup), and coursework in topics like
+                <strong>automata theory</strong> and <strong>databases</strong>.
+            </p>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section section-alt">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>C++</li>
+                        <li>C</li>
+                        <li>Python (basic)</li>
+                        <li>SQL (basic)</li>
+                        <li>HTML & CSS (this website!)</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Technologies & Tools</h3>
+                    <ul>
+                        <li>Git & GitHub</li>
+                        <li>Linux / Ubuntu</li>
+                        <li>SFML (C++ graphics)</li>
+                        <li>Doctest (C++ testing)</li>
+                        <li>VS Code / CLion</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Topics</h3>
+                    <ul>
+                        <li>Data Structures & Algorithms</li>
+                        <li>Object-Oriented Programming</li>
+                        <li>Automata & Formal Languages</li>
+                        <li>Linear Algebra & Probability (for CS)</li>
+                        <li>Relational Databases & SQL</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Projects</h2>
+            <p class="section-intro">
+                Here are some of my coding projects. You can view the source code on GitHub,
+                and in some cases see screenshots or demos.
+            </p>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card">
+                    <h3>Coup – C++ Game Implementation with GUI</h3>
+                    <p>
+                        A full implementation of the board game <em>Coup</em> in C++,
+                        including game logic, multiple roles, actions, blocks, and a GUI
+                        built with SFML. The project showcases OOP design, inheritance,
+                        polymorphism, and state management.
+                    </p>
+                    <ul class="project-tags">
+                        <li>C++</li>
+                        <li>SFML</li>
+                        <li>OOP</li>
+                    </ul>
+                    <div class="project-links">
+                        <!-- Replace # with your GitHub repo link -->
+                        <a href="#" target="_blank" rel="noopener">View on GitHub</a>
+                        <!-- Optional: link to screenshots / demo -->
+                        <!-- <a href="#" target="_blank" rel="noopener">View Demo</a> -->
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <h3>Generic Container Library – Custom Iterators in C++</h3>
+                    <p>
+                        A custom C++ container class with several iterator types
+                        (ascending, descending, side-cross, etc.). The project
+                        demonstrates template programming, custom iterators,
+                        and writing unit tests with doctest.
+                    </p>
+                    <ul class="project-tags">
+                        <li>C++</li>
+                        <li>Templates</li>
+                        <li>Iterators</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="#" target="_blank" rel="noopener">View on GitHub</a>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <h3>Algorithms & Automata Exercise Collection</h3>
+                    <p>
+                        A collection of solved exercises from courses in automata,
+                        formal languages, and algorithms. Includes DFA/NFA designs,
+                        regular expressions, grammars, and problem solutions
+                        written in a clear, exam-style format.
+                    </p>
+                    <ul class="project-tags">
+                        <li>Automata</li>
+                        <li>Theory</li>
+                        <li>Problem Solving</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="#" target="_blank" rel="noopener">View on GitHub</a>
+                    </div>
+                </article>
+
+                <!-- You can copy-paste and edit this block to add more projects -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section-alt">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>
+                Interested in working together or want to know more about my projects?
+                Feel free to reach out.
+            </p>
+            <ul class="contact-list">
+                <li><strong>Email:</strong> <a href="mailto:your.email@example.com">your.email@example.com</a></li>
+                <li><strong>GitHub:</strong> <a href="https://github.com/your-github-username" target="_blank" rel="noopener">github.com/your-github-username</a></li>
+                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/your-linkedin" target="_blank" rel="noopener">linkedin.com/in/your-linkedin</a></li>
+                <!-- Optional: link to CV -->
+                <!-- <li><strong>CV:</strong> <a href="cv.pdf" target="_blank" rel="noopener">Download PDF</a></li> -->
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="year"></span> Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Set current year automatically in footer
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
